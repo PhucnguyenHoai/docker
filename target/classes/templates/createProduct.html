@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Create Product</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+   <script th:src="@{/main.js}"></script>
+</head>
+<body>
+	Create Product:
+  <div ng-app="productModule" ng-controller="productController">
+<!--   	<form ng-submit="submitProduct()"> -->
+<!--          <table border="0"> -->
+<!-- <!--             <tr> --> -->
+<!-- <!--                <td>Pro Id</td> --> -->
+<!-- <!--                <td>{{productForm.productId}}</td> --> -->
+<!-- <!--             </tr> --> -->
+<!--             <tr> -->
+<!--                <td>Pro Name</td> -->
+<!--                <td><input type="text" ng-model="productForm.productName" /></td> -->
+<!--             </tr> -->
+<!--             <tr> -->
+<!--                <td>Pro Type</td> -->
+<!--                <td><input type="text" ng-model="productForm.productType"  /></td> -->
+<!--             </tr> -->
+<!--             <tr> -->
+<!--                <td>Pro Price</td> -->
+<!--                <td><input type="text" ng-model="productForm.price"  /></td> -->
+<!--             </tr> -->
+<!--             <tr> -->
+<!--                <td colspan="2"> -->
+<!--                   <input type="submit" value="Submit" class="blue-button" /> -->
+<!--                </td> -->
+<!--             </tr> -->
+<!--          </table> -->
+<!--       </form> -->
+<!--       <a class="create-button" ng-click="createProduct()">Reset</a> -->
+<!--   </div> -->
+  <a th:href="@{/}">Back home</a>
+  <a th:href="@{/products}">Product List</a>
+</body>
+</html>

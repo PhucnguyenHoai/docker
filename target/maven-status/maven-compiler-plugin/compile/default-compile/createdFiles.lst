@@ -1,0 +1,5 @@
+com\example\demo\StudentApplication.class
+com\example\demo\model\ProductForm.class
+com\example\demo\controller\MainController.class
+com\example\demo\dao\ProductDAO.class
+com\example\demo\model\Product.class

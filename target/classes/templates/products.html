@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Product List</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+<script th:src="@{/main.js}"></script>
+</head>
+<body ng-app="productModule" ng-controller="productController">
+	<div>
+		<h1>Create Product:</h1>
+		<form ng-submit="submitProduct()">
+			<table border="0">
+				<tr>
+					<td>Pro Id</td>
+					<td>{{productForm.productId}}</td>
+				</tr>
+				<tr>
+					<td>Pro Name</td>
+					<td><input type="text" ng-model="productForm.productName" /></td>
+				</tr>
+				<tr>
+					<td>Pro Type</td>
+					<td><input type="text" ng-model="productForm.productType" /></td>
+				</tr>
+				<tr>
+					<td>Pro Price</td>
+					<td><input type="text" ng-model="productForm.price" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Submit"
+						class="blue-button" /></td>
+				</tr>
+			</table>
+		</form>
+
+	</div>
+	<a ng-click="createProduct()">Reset</a>
+	<h1>Product List:</h1>
+
+	<table border="1">
+		<tr>
+			<th>Product ID</th>
+			<th>Product Name</th>
+			<th>Product Type</th>
+			<th>Product Price</th>
+		</tr>
+		<tr ng-repeat="product in products">
+			<td>{{ product.productId }}</td>
+			<td>{{ product.productName }}</td>
+			<td>{{ product.productType }}</td>
+			<td>{{ product.price }}</td>
+		</tr>
+	</table>
+	</div>
+	<a th:href="@{/}">Back home</a>
+	<a th:href="@{/createProduct}">Create Product</a>
+</body>
+</html>
